@@ -18,29 +18,29 @@ Container Registry: DockerHub
 🚀 How It Works (Step-by-Step Execution)
 Code & Dockerfile Preparation:
 
-A sample Node.js web application is created in index.js.
+1) A sample Node.js web application is created in index.js.
 
-Dependencies are defined in package.json.
+2) Dependencies are defined in package.json.
 
-A Dockerfile is written to define container configurations and dependencies.
+3) A Dockerfile is written to define container configurations and dependencies.
 
 GitHub Repository & Secrets Setup:
 
-Source code is pushed to the GitHub repository.
+1)Source code is pushed to the GitHub repository.
 
-DOCKER_USERNAME and DOCKER_PASSWORD (Personal Access Token) are securely added under Repository Settings -> Secrets and variables -> Actions.
+2) DOCKER_USERNAME and DOCKER_PASSWORD (Personal Access Token) are securely added under Repository Settings -> Secrets and variables -> Actions.
 
-Automation Pipeline (.github/workflows/main.yml):
+3) Automation Pipeline (.github/workflows/main.yml):
 
-Triggered automatically on every push event to the main branch.
+4) Triggered automatically on every push event to the main branch.
 
-Downloads the code (Checkout).
+5) Downloads the code (Checkout).
 
-Sets up the Node.js v18 environment and installs dependencies (npm install).
+6) Sets up the Node.js v18 environment and installs dependencies (npm install).
 
-Authenticates with DockerHub using stored secrets.
+7) Authenticates with DockerHub using stored secrets.
 
-Builds the Docker image and pushes it as dhananjay03/nodejs-demo-app:latest to DockerHub.
+8) Builds the Docker image and pushes it as dhananjay03/nodejs-demo-app:latest to DockerHub.
 
 📄 Code Structure & Line-by-Line Explanation
 1. index.js (Web Server Code)
